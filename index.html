@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/LogoMonster.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Monster Gym Fitness Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Header con Navegación -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="Imagenes/LogoMonster.png" alt="Logo" class="logo-icon"> 
+                    MONSTER GYM FITNESS CENTER
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#horarios">Horarios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Inicio -->
+            <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>¡Desata tu Potencial en MonsterGym Fitness Center!</h1>
+                <p>Conviértete en la mejor versión de ti mismo con entrenamientos épicos<br>y una comunidad que te impulsa a romper tus límites.<br>¡Tu transformación empieza YA!</p>
+                <a href="#contacto" class="cta-button">¡Únete a nuestra familia Fitness Hoy!</a>
+            </div>
+        </section>
+
+
+        <!-- Servicios -->
+        <section id="servicios" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://i.insider.com/644159ef632fda001803d079?width=700" alt="Entrenamiento Personal">
+                    <h3>PERSONAL TRAINER</h3>
+                    <p>Rutinas personalizadas con un entrenador certificado para alcanzar tus objetivos, con evaluación, seguimiento incluido.</p>
+                    <a href="https://wa.me/+593990013461?text=¿Podrías darme más información sobre la asesoría en Personal Trainer en Monster Gym?" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+                        <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Solicítalo aquí
+                    </a>
+                </div>
+                <div class="service-card">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/08/20/20/crossfit-1963860_1280.jpg" alt="Clases Grupales">
+                    <h3>AERO FUNCIONAL</h3>
+                    <p>Variedad de clases (Zumba, Yoga, Spinning, Pilates, funcional) para todos los niveles, con instructores expertos y horarios flexibles.</p>
+                    <a href="https://wa.me/+593990013461?text=¿Podrías darme más información sobre las clases de Aerofuncional en Monster Gym?" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+                        <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Solicítalo aquí
+                    </a>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nutrición">
+                    <h3>SUPLEMENTACIÓN</h3>
+                    <p>Planes alimenticios personalizados por nutricionistas para tus metas (grasa, músculo, salud), con consultas y seguimiento incluidos.</p>
+                    <a href="https://wa.me/+593990013461?text=¿Podrías darme más información sobre la Asesoría Nutricional en Monster Gym?" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+                        <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Solicítalo aquí
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- Sección Carrusel -->
+            <section id="galeria" class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide">
+                        <img src="Imagenes/gym1.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Imagenes/gym2.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Imagenes/gym3.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </section>
+
+            <script>
+                let index = 0;
+                const slides = document.querySelectorAll(".carousel-slide");
+                function moveSlide(step) {
+                    index += step;
+                    if (index >= slides.length) index = 0;
+                    if (index < 0) index = slides.length - 1;
+                    document.querySelector(".carousel").style.transform = `translateX(-${index * 100}%)`;
+                }
+                setInterval(() => moveSlide(1), 3000);
+            </script>
+        </br>
+             <!-- Fin sección Carrusel -->
+
+
+
+        <!-- Sección Horarios -->
+        <!--<section id="horarios" class="schedule">
+            <h2>Horarios en Monster Gym</h2>
+            <table class="pretty-table">
+                <thead>
+                    <tr>
+                        <th>Días disponibles</th>
+                        <th>Horarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes - Viernes</td>
+                        <td>6:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>8:00 AM - 16:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Aerofuncional</td>
+                        <td>7:00 AM - 18:00 PM - 19:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section> -->
+
+        <section id="horarios" class="schedule">
+            <h2>Horarios en Monster Gym</h2>
+            <table class="pretty-table">
+                <thead>
+                    <tr>
+                        <th>Días disponibles</th>
+                        <th>Horarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes - Viernes</td>
+                        <td>6:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>8:00 AM - 16:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Aerofuncional</td>
+                        <td>7:00 AM - 18:00 PM - 19:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+       
+
+
+
+    <!-- Sección Contacto con Formulario -->
+    <section id="contacto" class="contact">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #333; font-size: 32px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Contáctanos</h2>
+        <form action="process.php" method="POST" class="contact-form" style="max-width: 750px; margin: 0 auto; padding: 40px; background: linear-gradient(135deg, #ffffff, #f9f9f9); border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #eee;">
+            <input type="text" name="nombre" placeholder="Nombre" required style="width: 100%; padding: 15px 20px; margin-bottom: 20px; border: none; border-radius: 10px; font-size: 16px; background-color: #fff; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); transition: box-shadow 0.3s, transform 0.3s;">
+            <input type="email" name="email" placeholder="Correo Electrónico" required style="width: 100%; padding: 15px 20px; margin-bottom: 20px; border: none; border-radius: 10px; font-size: 16px; background-color: #fff; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); transition: box-shadow 0.3s, transform 0.3s;">
+            <textarea name="mensaje" placeholder="Tu Mensaje" required style="width: 100%; padding: 15px 20px; margin-bottom: 20px; border: none; border-radius: 10px; font-size: 16px; min-height: 150px; resize: vertical; background-color: #fff; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); transition: box-shadow 0.3s, transform 0.3s;"></textarea>
+            <button type="submit" class="button-enviar" style="display: block; width: 100%; padding: 15px; background-color: #14d4b4; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; box-shadow: 0 5px 15px rgba(20,212,180,0.4); transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; cursor: pointer;">Enviar mensaje</button>
+        </form>
+    </section> 
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> Monster Gym Fitness Center. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <!-- Botón flotante de WhatsApp -->
+        <a href="https://wa.me/+593990013461?text=¡Hola! Podrían brindarme más información sobre los precios de cada servicio, formas de pago, mensualidades y demás? Quedo atento, gracias!" target="_blank" class="whatsapp-float" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); text-decoration: none; font-size: 18px; z-index: 1000;">
+        <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Chatea con nosotros
+    </a>
+
+    
+
+     
+
+    <script src="script.js"></script>
+</body>
+</html>
